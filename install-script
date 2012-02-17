@@ -1,0 +1,36 @@
+#
+# Private setup after clean install.
+#
+
+# A package, for me??
+sudo apt-get install irssi vim git \
+git-svn git-core gitk meld openssh-client \
+openssh-server libssl-dev build-essential \
+curl chromium-browser mumble mnemosyne \
+gimp inkscape audacity valgrind open \
+openjdk-7-jdk dvipng texlive-latex-base
+
+# Moar fps!!
+sudo apt-add-repository ppa:mj-casalogic/ironhide
+sudo apt-get update && sudo apt-get install ironhide
+
+# Make JavaScript suck less!
+wget http://nodejs.org/dist/node-v0.4.12.tar.gz .
+tar -zxvf node-v0.4.12.tar.gz
+cd node-v0.4.12
+./configure
+make install
+sudo make install
+cd ..
+rm node-v0.4.12.tar.gz
+curl http://npmjs.org/install.sh | sudo sh
+sudo npm install jslint -g
+sudo npm install js-beautify-node -g
+
+# Build my Javas plz
+wget maven-3
+tar -zxvf maven-3
+mv maven-3 ~/bin/
+ln -s ~/bin/maven-3/mvn ~/bin/mvn
+
+# Now run deja dup restore!
