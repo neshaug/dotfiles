@@ -1,6 +1,4 @@
-files = bashrc gitconfig vimrc  
-
-dirs = irrsi
+files = gitconfig vimrc  
 
 all: install
 

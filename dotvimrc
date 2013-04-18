@@ -1,10 +1,12 @@
-" want to have syntax highlightning
+" spell checking
+set spell
+" syntax high lightning
 syntax on
 " show a ruler, shows line and column numbers
 set ruler
-" file type detection for automatic highlightning
+" file type detection for automatic high lightning
 filetype on
-" file type plugins for example omni completion (omnifunc)
+" file type plugins
 filetype plugin on
 " show line numbers
 set number
@@ -21,32 +23,18 @@ set softtabstop=4
 " use spaces for tabs
 set expandtab
 " indentation type, also try cindent (C-indent)
-" set autoindent
-set cindent
-" 256 colorz!
-set t_Co=256
+set autoindent
 " color theme
 color desert
+" 256 colors
+set t_Co=256
 " show the matching bracket
 set showmatch
-" show space errors
-let c_space_errors = 1
 
-" show column marker (+option-name  Vim option that works.)
+" show column marker                                                                                                                                                                                   
 if exists('+colorcolumn')
     set colorcolumn=80
-    highlight ColorColumn ctermbg=235
-endif
+    highlight ColorColumn ctermbg=235 
+endif   
 
-au FileType javascript set makeprg=/home/neshaug/bin/js/jslint\ %
-
-"set makeprg=g++\ %"
-"set errorformat=%f:%l:%m"
-
-" ### PYTHON ###
-" indent after these keywords
-"autocmd BufRead *.py set smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class"
-
-"set makeprg=cat\ %\ \\\|\ /usr/local/bin/jslint\ %
-"set errorformat=%l,%c:%m
-"set makeprg:gcc\ %"
+set nobackup
