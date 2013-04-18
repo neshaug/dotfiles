@@ -1,4 +1,4 @@
-files = gitconfig vimrc  
+files = gitconfig vimrc screenrc
 
 all: install
 
